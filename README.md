@@ -228,9 +228,7 @@ Completed (1 file worked, 1 file failed)
 # ghcide fails for single-target project.cabal builds that have hackage dependencies
 
 Consider the above *working-single-target-project-dot-cabal* except with an external hackage
-dependency.  This is the structure of `broken-single-target-project-dot-cabal-with-hackage-deps`.
-It fails as noted by Avi-D-Coder
-(https://github.com/digital-asset/ghcide/issues/487#issuecomment-600390678).
+dependency.  Also let us assume your `.ghc/*/environment/default` includes packages that are not compatible with the current project. This is the structure of `broken-single-target-project-dot-cabal-with-hackage-deps`. It fails as [noted by Avi-D-Coder](https://github.com/digital-asset/ghcide/issues/487#issuecomment-600390678).
 
 ```
 ghcide version: 0.1.0 (GHC: 8.6.4) (PATH: /Users/tommd/.cabal/store/ghc-8.6.4/ghcd-0.0.3-ad29d5d6/bin/ghcide) (GIT hash: 8b328bb7c5f3e09280788b56abd6fb6d0bfb08ce)
@@ -307,4 +305,29 @@ Files that failed:
  * /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps/src/X.hs
 
 Completed (0 files worked, 2 files failed)
+```
+
+Though with a cohesive default environment things proceeds as one expects:
+
+```
+cide version: 0.1.0 (GHC: 8.6.4) (PATH: /Users/tommd/.cabal/store/ghc-8.6.4/ghcd-0.0.3-ad29d5d6/bin/ghcide) (GIT hash: 8b328bb7c5f3e09280788b56abd6fb6d0bfb08ce)
+Ghcide setup tester in /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps.
+Report bugs at https://github.com/digital-asset/ghcide/issues
+
+Step 1/6: Finding files to test in /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps
+Found 2 files
+
+Step 2/6: Looking for hie.yaml files that control setup
+Found 1 cradle
+
+Step 3/6, Cradle 1/1: Implicit cradle for /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps
+Cradle {cradleRootDir = "/private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps", cradleOptsProg = CradleAction: Default}
+
+Step 4/6, Cradle 1/1: Loading GHC Session
+
+Step 5/6: Initializing the IDE
+
+Step 6/6: Type checking the files
+
+Completed (2 files worked, 0 files failed)
 ```
