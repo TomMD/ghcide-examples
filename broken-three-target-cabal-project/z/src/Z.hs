@@ -1,6 +1,6 @@
-module Y where
+module Z where
 
-import X
+import Y
 
-y :: Double
-y = fromIntegral x * 10 + 2
+z :: Double
+z = y * 10 + 2

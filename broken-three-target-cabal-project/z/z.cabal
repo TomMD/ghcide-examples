@@ -18,5 +18,5 @@ extra-source-files:  CHANGELOG.md
 
 library
   exposed-modules:     Z
-  build-depends:       base >=4.12 && <4.13, x, y
+  build-depends:       base >=4.12 && <4.13, y
   hs-source-dirs:      src
