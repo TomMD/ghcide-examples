@@ -1,0 +1,133 @@
+Ghcide setup tester in /private/tmp/xyz/broken-multi-target-cabal-project.
+Report bugs at https://github.com/digital-asset/ghcide/issues
+
+Step 1/6: Finding files to test in /private/tmp/xyz/broken-multi-target-cabal-project
+Found 6 files
+
+Step 2/6: Looking for hie.yaml files that control setup
+Found 1 cradle
+
+Step 3/6: Initializing the IDE
+[DEBUG] Warning: Client does not support watched files. Falling back to OS polling
+
+Step 4/6: Type checking the files
+[DEBUG] Set files of interest to: [NormalizedFilePath "/private/tmp/xyz/broken-multi-target-cabal-project/z/Setup.hs",NormalizedFilePath "/private/tmp/xyz/broken-multi-target-cabal-project/x/Setup.hs",NormalizedFilePath "/private/tmp/xyz/broken-multi-target-cabal-project/x/src/X.hs",NormalizedFilePath "/private/tmp/xyz/broken-multi-target-cabal-project/z/src/Z.hs",NormalizedFilePath "/private/tmp/xyz/broken-multi-target-cabal-project/y/Setup.hs",NormalizedFilePath "/private/tmp/xyz/broken-multi-target-cabal-project/y/src/Y.hs"]
+[DEBUG] Starting shakeRun (aborting the previous one took 0.00s)
+[DEBUG] Finishing shakeRun (took 0.00s, exception: AsyncCancelled)
+[DEBUG] Starting shakeRun (aborting the previous one took 0.00s)
+Shelling out to cabal "/private/tmp/xyz/broken-multi-target-cabal-project/z/Setup.hs"
+> Resolving dependencies...
+> Build profile: -w ghc-8.6.4 -O1
+> In order, the following will be built (use -v for more details):
+>  - x-0.1.0.0 (lib) (configuration changed)
+>  - y-0.1.0.0 (lib) (configuration changed)
+>  - z-0.1.0.0 (lib) (configuration changed)
+> Configuring library for x-0.1.0.0..
+> Warning: Packages using 'cabal-version: >= 1.10' must specify the
+> 'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+> If a component uses different languages in different modules then list the
+> other ones in the 'other-languages' field.
+> Preprocessing library for x-0.1.0.0..
+> Building library for x-0.1.0.0..
+> Configuring library for y-0.1.0.0..
+> Warning: Packages using 'cabal-version: >= 1.10' must specify the
+> 'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+> If a component uses different languages in different modules then list the
+> other ones in the 'other-languages' field.
+> Preprocessing library for y-0.1.0.0..
+> Building library for y-0.1.0.0..
+> Configuring library for z-0.1.0.0..
+> Warning: Packages using 'cabal-version: >= 1.10' must specify the
+> 'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+> If a component uses different languages in different modules then list the
+> other ones in the 'other-languages' field.
+> Preprocessing library for z-0.1.0.0..
+ComponentOptions {componentOptions = ["-fbuilding-cabal-package","-O0","-outputdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build","-odir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build","-hidir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build","-stubdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build","-i","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build","-i/private/tmp/xyz/broken-multi-target-cabal-project/z/src","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build/autogen","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build/autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build","-optP-include","-optP/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/build/autogen/cabal_macros.h","-this-unit-id","z-0.1.0.0-inplace","-hide-all-packages","-Wmissing-home-modules","-no-user-package-db","-package-db","/Users/tommd/.cabal/store/ghc-8.6.4/package.db","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/packagedb/ghc-8.6.4","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/z-0.1.0.0/package.conf.inplace","-package-id","base-4.12.0.0","-package-id","x-0.1.0.0-inplace","-package-id","y-0.1.0.0-inplace","-XHaskell98","Z","-hide-all-packages"], componentDependencies = ["cabal.project"]}
+"Making new HscEnv[z-0.1.0.0-inplace]"
+Shelling out to cabal "/private/tmp/xyz/broken-multi-target-cabal-project/y/Setup.hs"
+File:     /private/tmp/xyz/broken-multi-target-cabal-project/z/Setup.hs
+Hidden:   no
+Range:    1:7-1:26
+Source:   not found
+Severity: DsError
+Message: 
+  [0;91mCould not load module ‘Distribution.Simple’
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.
+  It is a member of the hidden package ‘Cabal-2.4.0.1’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.[0m
+> Resolving dependencies...
+> Build profile: -w ghc-8.6.4 -O1
+> In order, the following will be built (use -v for more details):
+>  - x-0.1.0.0 (lib) (configuration changed)
+>  - y-0.1.0.0 (lib) (configuration changed)
+> Configuring library for x-0.1.0.0..
+> Warning: Packages using 'cabal-version: >= 1.10' must specify the
+> 'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+> If a component uses different languages in different modules then list the
+> other ones in the 'other-languages' field.
+> Preprocessing library for x-0.1.0.0..
+> Building library for x-0.1.0.0..
+> Configuring library for y-0.1.0.0..
+> Warning: Packages using 'cabal-version: >= 1.10' must specify the
+> 'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+> If a component uses different languages in different modules then list the
+> other ones in the 'other-languages' field.
+> Preprocessing library for y-0.1.0.0..
+ComponentOptions {componentOptions = ["-fbuilding-cabal-package","-O0","-outputdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build","-odir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build","-hidir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build","-stubdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build","-i","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build","-i/private/tmp/xyz/broken-multi-target-cabal-project/y/src","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build/autogen","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build/autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build","-optP-include","-optP/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/build/autogen/cabal_macros.h","-this-unit-id","y-0.1.0.0-inplace","-hide-all-packages","-Wmissing-home-modules","-no-user-package-db","-package-db","/Users/tommd/.cabal/store/ghc-8.6.4/package.db","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/packagedb/ghc-8.6.4","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/y-0.1.0.0/package.conf.inplace","-package-id","base-4.12.0.0","-package-id","x-0.1.0.0-inplace","-XHaskell98","Y","-hide-all-packages"], componentDependencies = ["cabal.project"]}
+"Making new HscEnv[y-0.1.0.0-inplace,z-0.1.0.0-inplace]"
+Shelling out to cabal "/private/tmp/xyz/broken-multi-target-cabal-project/x/src/X.hs"
+File:     /private/tmp/xyz/broken-multi-target-cabal-project/y/Setup.hs
+Hidden:   no
+Range:    1:7-1:26
+Source:   not found
+Severity: DsError
+Message: 
+  [0;91mCould not load module ‘Distribution.Simple’
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.
+  It is a member of the hidden package ‘Cabal-2.4.0.1’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.[0m
+> Resolving dependencies...
+> Build profile: -w ghc-8.6.4 -O1
+> In order, the following will be built (use -v for more details):
+>  - x-0.1.0.0 (lib) (configuration changed)
+> Configuring library for x-0.1.0.0..
+> Warning: Packages using 'cabal-version: >= 1.10' must specify the
+> 'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+> If a component uses different languages in different modules then list the
+> other ones in the 'other-languages' field.
+> Preprocessing library for x-0.1.0.0..
+ComponentOptions {componentOptions = ["-fbuilding-cabal-package","-O0","-outputdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-odir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-hidir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-stubdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-i","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-i/private/tmp/xyz/broken-multi-target-cabal-project/x/src","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/autogen","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-optP-include","-optP/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/autogen/cabal_macros.h","-this-unit-id","x-0.1.0.0-inplace","-hide-all-packages","-Wmissing-home-modules","-no-user-package-db","-package-db","/Users/tommd/.cabal/store/ghc-8.6.4/package.db","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/packagedb/ghc-8.6.4","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/package.conf.inplace","-package-id","base-4.12.0.0","-XHaskell98","X","-hide-all-packages"], componentDependencies = ["cabal.project"]}
+"Making new HscEnv[x-0.1.0.0-inplace,y-0.1.0.0-inplace,z-0.1.0.0-inplace]"
+Shelling out to cabal "/private/tmp/xyz/broken-multi-target-cabal-project/x/Setup.hs"
+> Resolving dependencies...
+> Build profile: -w ghc-8.6.4 -O1
+> In order, the following will be built (use -v for more details):
+>  - x-0.1.0.0 (lib) (configuration changed)
+> Configuring library for x-0.1.0.0..
+> Warning: Packages using 'cabal-version: >= 1.10' must specify the
+> 'default-language' field for each component (e.g. Haskell98 or Haskell2010).
+> If a component uses different languages in different modules then list the
+> other ones in the 'other-languages' field.
+> Preprocessing library for x-0.1.0.0..
+ComponentOptions {componentOptions = ["-fbuilding-cabal-package","-O0","-outputdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-odir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-hidir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-stubdir","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-i","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-i/private/tmp/xyz/broken-multi-target-cabal-project/x/src","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/autogen","-i/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/global-autogen","-I/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build","-optP-include","-optP/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/build/autogen/cabal_macros.h","-this-unit-id","x-0.1.0.0-inplace","-hide-all-packages","-Wmissing-home-modules","-no-user-package-db","-package-db","/Users/tommd/.cabal/store/ghc-8.6.4/package.db","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/packagedb/ghc-8.6.4","-package-db","/private/tmp/xyz/broken-multi-target-cabal-project/dist-newstyle/build/x86_64-osx/ghc-8.6.4/x-0.1.0.0/package.conf.inplace","-package-id","base-4.12.0.0","-XHaskell98","X","-hide-all-packages"], componentDependencies = ["cabal.project"]}
+"Making new HscEnv[x-0.1.0.0-inplace,x-0.1.0.0-inplace,y-0.1.0.0-inplace,z-0.1.0.0-inplace]"
+File:     /private/tmp/xyz/broken-multi-target-cabal-project/x/Setup.hs
+Hidden:   no
+Range:    1:7-1:26
+Source:   not found
+Severity: DsError
+Message: 
+  [0;91mCould not load module ‘Distribution.Simple’
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.
+  It is a member of the hidden package ‘Cabal-2.4.0.1’.
+  Perhaps you need to add ‘Cabal’ to the build-depends in your .cabal file.[0m
+[DEBUG] Finishing shakeRun (took 53.25s, completed)
