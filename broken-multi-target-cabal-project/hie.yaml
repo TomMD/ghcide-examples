@@ -1,0 +1,6 @@
+cradle:
+    multi:
+        - path: "./x"
+          config: {cradle: {cabal: {component: "lib:x"}}}
+        - path: "./y"
+          config: {cradle: {cabal: {component: "lib:y"}}}
