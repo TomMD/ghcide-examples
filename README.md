@@ -1,3 +1,6 @@
+The repository exists to capture working and failing setups for ghcide related to issue
+[487](https://github.com/digital-asset/ghcide/issues/487).
+
 # ghcide is broken for multi-target project using cabal.project
 
 Consider the project:
@@ -220,4 +223,88 @@ Files that failed:
  * /private/tmp/xyz/working-single-target-project-dot-cabal/Setup.hs
 
 Completed (1 file worked, 1 file failed)
+```
+
+# ghcide fails for single-target project.cabal builds that have hackage dependencies
+
+Consider the above *working-single-target-project-dot-cabal* except with an external hackage
+dependency.  This is the structure of `broken-single-target-project-dot-cabal-with-hackage-deps`.
+It fails as noted by Avi-D-Coder
+(https://github.com/digital-asset/ghcide/issues/487#issuecomment-600390678).
+
+```
+ghcide version: 0.1.0 (GHC: 8.6.4) (PATH: /Users/tommd/.cabal/store/ghc-8.6.4/ghcd-0.0.3-ad29d5d6/bin/ghcide) (GIT hash: 8b328bb7c5f3e09280788b56abd6fb6d0bfb08ce)
+Loaded package environment from /Users/tommd/.ghc/x86_64-darwin-8.6.4/environments/default
+Ghcide setup tester in /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps.
+Report bugs at https://github.com/digital-asset/ghcide/issues
+
+Step 1/6: Finding files to test in /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps
+Found 2 files
+
+Step 2/6: Looking for hie.yaml files that control setup
+Found 1 cradle
+
+Step 3/6, Cradle 1/1: Implicit cradle for /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps
+Cradle {cradleRootDir = "/private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps", cradleOptsProg = CradleAction: Default}
+
+Step 4/6, Cradle 1/1: Loading GHC Session
+
+Step 5/6: Initializing the IDE
+
+Step 6/6: Type checking the files
+File:     /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps/Setup.hs
+Hidden:   no
+Range:    1:7-1:26
+Source:   not found
+Severity: DsError
+Message: 
+  [0;91mCould not load module ‘Distribution.Simple’
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  You can run ‘:set -package Cabal’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘Cabal-3.0.0.0’.
+  You can run ‘:set -package Cabal’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘Cabal-2.4.0.1’.
+  You can run ‘:set -package Cabal’ to expose it.
+  (Note: this unloads all the modules in the current scope.)[0m
+File:     /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps/src/X.hs
+Hidden:   no
+Range:    2:7-2:26
+Source:   not found
+Severity: DsError
+Message: 
+  [0;91mCould not load module ‘Data.HashMap.Strict’
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)
+  It is a member of the hidden package ‘unordered-containers-0.2.10.0’.
+  You can run ‘:set -package unordered-containers’ to expose it.
+  (Note: this unloads all the modules in the current scope.)[0m
+Files that failed:
+ * /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps/Setup.hs
+ * /private/tmp/xyz/broken-single-target-project-dot-cabal-with-hackage-deps/src/X.hs
+
+Completed (0 files worked, 2 files failed)
 ```
